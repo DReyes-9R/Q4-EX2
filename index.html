@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise #2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+<h1>Age Verification</h1>
+
+      <div class="calculator">
+        <label for="fname">Enter Name:</label>
+        <input type="text" id="fname" class="form-control">
+
+        <label for="age">Enter Age:</label>
+        <input type="text" id="age" class="form-control">
+
+        <button type="button" onclick="verifyAge()">Submit</button>
+        <button type="button" onclick="reloadPage()">Refresh</button>
+    </div>
+  </div>
+</div>
+
+  <script>
+function verifyAge() {
+  const inputAge = document.getElementById('age').value;
+  const age = parseInt(inputAge);
+
+  if (isNaN(age)) {
+    alert('Please enter a valid age.');
+    } else if (age < 18) {
+      alert('Not valid to vote, you must be 18 and above to vote');
+    } else {
+      alert('Welcome!');
+    }
+  }
+
+  function reloadPage() {
+    location.reload();
+    }
+  </script>
+
+<footer class="footer">
+  <p>A.Y. 2024-2025 | David Miguel A. Reyes | ICT Ex#2</p>
+</footer>
+
+
+</body>
+</html>
